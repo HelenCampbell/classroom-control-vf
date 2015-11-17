@@ -1,6 +1,6 @@
 class hosts {
-  host { 'helencampbell.puppetlabs.vm':
+  host { 'testing.puppetlabs.vm':
     ensure => present,
-    ip => '172.17.0.21',
+    ip => '127.0.0.1',
   }
 }
