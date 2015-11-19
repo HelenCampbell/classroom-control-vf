@@ -57,6 +57,9 @@ node default {
   $message = hiera('message')
   notify { $message: }
   
+  nginx::vhost { 'punch.puppetlabs.vm': }
+  nginx::vhost { 'judy.puppetlabs.vm' : }
+  
   if $::virtual != 'physical' {
     $vmname = capitalize($::virtual)
     notify { "This is a ${vmname} virtual machine.": }
